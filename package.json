@@ -1,0 +1,40 @@
+{
+  "name": "hardcoded-1-1-call",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n SIGNAL,VITE -c cyan,green \"npm:server\" \"npm:client\"",
+    "client": "vite --host 127.0.0.1 --port 5173 --strictPort",
+    "server": "node --env-file-if-exists=.env server/index.js",
+    "server:watch": "node --watch --env-file-if-exists=.env server/index.js",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview --host 127.0.0.1 --port 4173 --strictPort",
+    "test": "node --test tests/signaling.test.js",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "socket.io": "^4.8.4",
+    "socket.io-client": "^4.8.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.6",
+    "eslint": "^10.13.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "vite": "8.3.5"
+  },
+  "engines": {
+    "node": "^22.13.0 || >=24.0.0"
+  }
+}

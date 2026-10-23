@@ -1,0 +1,102 @@
+main {
+  max-width: 1060px;
+  margin: auto;
+  padding: 24px 18px 48px;
+}
+h1 {
+  font-size: 1.7rem;
+  margin: 0 0 8px;
+}
+h2 {
+  font-size: 1rem;
+  margin: 0 0 10px;
+}
+p,
+li {
+  line-height: 1.55;
+}
+.instructions {
+  padding-left: 24px;
+}
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  padding: 14px;
+  border: 1px solid #d6dce3;
+  background: white;
+  font-size: 0.9rem;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+.videos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+.video-panel {
+  border: 1px solid #d6dce3;
+  padding: 12px;
+  background: #fff;
+  min-width: 0;
+}
+video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #15191d;
+  object-fit: contain;
+}
+.video-panel p {
+  margin: 8px 0 0;
+  color: #59636e;
+  font-size: 0.9rem;
+}
+.note {
+  color: #59636e;
+  font-size: 0.9rem;
+}
+.error {
+  padding: 12px;
+  border: 1px solid #d9a2a2;
+  background: #fff0f0;
+  color: #8c2020;
+}
+.logs {
+  margin: 24px 0;
+}
+.log-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.log-heading h2 {
+  margin: 0;
+}
+pre {
+  height: 240px;
+  overflow: auto;
+  background: #fff;
+  border: 1px solid #d6dce3;
+  padding: 12px;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+details {
+  font-size: 0.9rem;
+}
+summary {
+  cursor: pointer;
+}
+@media (max-width: 650px) {
+  .videos {
+    grid-template-columns: 1fr;
+  }
+}

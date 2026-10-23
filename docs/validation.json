@@ -1,0 +1,72 @@
+{
+  "project": "Hardcoded_1-1_CALL",
+  "validated_on": "2026-10-22",
+  "runtime": {
+    "node": "24.19.0",
+    "npm": "11.9.0",
+    "vite": "8.3.5",
+    "playwright": "1.64.1",
+    "browser": "Chromium 138.0.7204.0"
+  },
+  "checks": [
+    {
+      "command": "npm run lint",
+      "result": "passed"
+    },
+    {
+      "command": "npm run build",
+      "result": "passed"
+    },
+    {
+      "command": "npm test",
+      "result": "passed",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "command": "npm run test:e2e",
+      "result": "passed",
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "duration_ms": 8940.404,
+      "environment": {
+        "PLAYWRIGHT_CHROMIUM_EXECUTABLE": "existing Chromium 138 executable"
+      }
+    }
+  ],
+  "browser_evidence": [
+    "Connected RTCPeerConnection in both pages",
+    "Incoming audio bytes and decoded video frames at both peers",
+    "Remote video rendered with nonzero dimensions",
+    "Mute and camera toggles",
+    "Two additional hang-up and re-call rounds",
+    "Third-participant rejection",
+    "Leave stops capture",
+    "Role promotion and replacement participant",
+    "Refresh followed by manual rejoin and call",
+    "Permission-denial feedback",
+    "Cancelled permission request releases late media"
+  ],
+  "ui_checks": {
+    "desktop_horizontal_overflow": false,
+    "mobile_horizontal_overflow": false,
+    "desktop_viewport": {
+      "width": 1100,
+      "height": 1000
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "limitations": [
+    "Synthetic browser camera and microphone",
+    "No human-audible playback assertion",
+    "No physical camera/microphone or phone verification",
+    "No real TURN, restrictive NAT or carrier-network verification",
+    "No Firefox or Safari verification",
+    "Default Playwright browser download failed in the build environment; an existing Chromium executable was used"
+  ]
+}
